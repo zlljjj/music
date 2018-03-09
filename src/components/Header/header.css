@@ -1,0 +1,51 @@
+.header {
+  background: #141414;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #3a3a3a;
+  padding: 0px 30px;
+  z-index: 1;
+  box-sizing: border-box;
+  display: flex;
+}
+.header .name {
+  float: left;
+  line-height: 60px;
+  color: #a0a0a0;
+  font-size: 26px;
+  cursor: pointer;
+  flex: 1;
+}
+.header .name:hover {
+  color: rgba(199, 199, 199, 0.4);
+}
+.header .tab {
+  float: left;
+  color: #a0a0a0;
+  font-size: 14px;
+  margin-top: 20px;
+  flex: 2;
+}
+.header .tab .sub {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 20px;
+}
+.header .tab .sub:hover {
+  color: rgba(199, 199, 199, 0.4);
+  border-bottom: 1px solid #61b25a;
+}
+.header .login {
+  float: right;
+  font-size: 12px;
+  line-height: 60px;
+  color: #a0a0a0;
+  text-align: right;
+  cursor: pointer;
+}
+.header .login:hover {
+  color: rgba(199, 199, 199, 0.4);
+}
