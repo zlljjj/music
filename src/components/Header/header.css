@@ -39,6 +39,9 @@
   color: rgba(199, 199, 199, 0.4);
   border-bottom: 1px solid #61b25a;
 }
+.header .tab .active {
+  border-bottom: 1px solid #61b25a;
+}
 .header .login {
   float: right;
   font-size: 12px;
