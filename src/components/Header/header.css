@@ -30,6 +30,7 @@
   flex: 2;
 }
 .header .tab .sub {
+  color: #a0a0a0;
   cursor: pointer;
   display: inline-block;
   margin-right: 20px;
