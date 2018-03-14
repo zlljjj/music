@@ -1,4 +1,5 @@
 .header {
+  min-width: 1000px;
   background: #141414;
   position: fixed;
   right: 0;

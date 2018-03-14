@@ -1,3 +1,52 @@
 .tech {
   width: 100%;
+  height: 100%;
+  padding: 20px 25px;
+  overflow: scroll;
+}
+.tech .tech-search {
+  width: 200px;
+  background: #262626;
+  border: 1px solid #3a3a3a;
+  padding: 10px;
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 25px;
+}
+.tech .tech-search input {
+  height: 22px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  color: #a0a0a0;
+}
+.tech .tech-search .icon {
+  position: absolute;
+  left: 7px;
+  top: 12px;
+}
+.tech .tech-songList {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 10px;
+  background: #262626;
+  border: 1px solid #3a3a3a;
+  position: relative;
+  overflow: hidden;
+  padding-left: 150px;
+}
+.tech .tech-songList .tech-songList-img {
+  width: 120px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.tech .tech-songList .tech-songList-img img {
+  width: 120px;
+}
+.tech .tech-songList .tech-songList-word {
+  line-height: 58px;
+  color: #a0a0a0;
 }

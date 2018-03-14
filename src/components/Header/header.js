@@ -1,7 +1,8 @@
 import React , { Component }from 'react';
-import './header.css'
+import './header.css';
 import { Link } from 'react-router-dom';
-import history from '../../history'
+import history from '../../history';
+
 
 
 class Header extends Component {
@@ -11,6 +12,7 @@ class Header extends Component {
             tabVal: history.location.pathname,
         };
     }
+
     changeTab = (name) => {
         this.setState({
             tabVal:name
@@ -22,7 +24,7 @@ class Header extends Component {
                 <div className="name">Cynnsound</div>
                 <div className="tab">
                     <Link to="/tech">
-                        <div className = {this.state.tabVal === '/tech' ? "sub active":"sub"} onClick={this.changeTab.bind(this,'/tech')}>TECH HOUSE</div>
+                        <div className = {this.state.tabVal === '/tech' ? "sub active":"sub"} onClick={this.changeTab.bind(this,'/tech')}>SONG HOUSE</div>
                     </Link>
                     <Link to="/minimal">
                         <div className = {this.state.tabVal === '/minimal' ? "sub active":"sub"} onClick={this.changeTab.bind(this,"/minimal")}>MINIMAL</div>
