@@ -1,4 +1,4 @@
-import { searchSongApi } from '../api/api'
+import { searchSongApi } from '../../api/api'
 
 
 export const searchSong = (keywords) => (dispatch,getstate) => {

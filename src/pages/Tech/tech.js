@@ -2,7 +2,7 @@ import React , { Component } from 'react';
 import './tech.css';
 import { Icon , Spin } from 'antd';
 
-import { searchSong } from '../../actions/techAction';
+import { searchSong } from './techAction';
 import { connect } from 'react-redux';
 
 class Tech extends Component {
