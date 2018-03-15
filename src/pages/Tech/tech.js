@@ -64,12 +64,11 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToprops = dispatch => ({
+const mapDispatchToProps = dispatch => ({
     getSongList:keywords => dispatch(searchSong(keywords))
 })
 
-
 export default connect(
     mapStateToProps,
-    mapDispatchToprops,
+    mapDispatchToProps,
 )(Tech);

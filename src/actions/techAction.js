@@ -9,7 +9,7 @@ export const searchSong = (keywords) => (dispatch,getstate) => {
         if(res.code === 200){
             dispatch({ type:"SEARCHSONG_SUCCESS" , songs: res.result.songs})
         } else {
-            dispatch({ type:"SEARCHSONG_FAIL" , songs: res.result.songs})
+            dispatch({ type:"SEARCHSONG_FAIL" })
         }
     }) 
 }
