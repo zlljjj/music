@@ -1,7 +1,7 @@
 import React , { Component } from 'react';
 import './tech.css';
-import { Icon } from 'antd';
-import { searchSongApi } from '../../api/api'
+import { Icon , Spin } from 'antd';
+
 import { searchSong } from '../../actions/techAction';
 import { connect } from 'react-redux';
 
@@ -15,21 +15,13 @@ class Tech extends Component {
     }
 
     componentDidMount(){
-        // this.searchSong();
+        
     }
 
     searchSong(event){
         const { getSongList } = this.props;
         if(event.keyCode === 13){
-            searchSongApi({
-                keywords: this.state.searchVal,
-            }).then((res) => {
-                if(res.code === 200){
-                    getSongList(res.result.songs);
-                } else {
-                    getSongList([]);
-                }
-            }) 
+            getSongList(this.state.searchVal);
         }
     }
 
@@ -48,6 +40,7 @@ class Tech extends Component {
                     <Icon type="search" className = "icon" style={{ fontSize: 18, color: '#61b25a' }}/>
                     <input type="text" placeholder="SEARCH..." value={searchVal} onChange={this.changeSearch.bind(this)} onKeyUp={this.searchSong.bind(this)} />
                 </div>
+                <Spin spinning={songList.loading} size="large" className = "tech-spin" />
                 { 
                     songList.songs ? songList.songs.map((item,i)=>(
                         <div className="tech-songList" key={i}>
@@ -72,7 +65,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToprops = dispatch => ({
-    getSongList:songs => dispatch(searchSong(songs))
+    getSongList:keywords => dispatch(searchSong(keywords))
 })
 
 

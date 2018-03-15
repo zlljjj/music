@@ -1,4 +1,15 @@
-export const searchSong = songs => ({
-    type: 'SEARCH_SONG',
-    songs,
-})
+import { searchSongApi } from '../api/api'
+
+
+export const searchSong = (keywords) => (dispatch,getstate) => {
+    dispatch({ type:"SEARCHSONG_WAIT" })
+    searchSongApi({
+        keywords: keywords,
+    }).then((res) => {
+        if(res.code === 200){
+            dispatch({ type:"SEARCHSONG_SUCCESS" , songs: res.result.songs})
+        } else {
+            dispatch({ type:"SEARCHSONG_FAIL" , songs: res.result.songs})
+        }
+    }) 
+}

@@ -1,20 +1,28 @@
-const songlist = (state = [], action) => {
+export const songlist = (state = [], action) => {
     switch (action.type) {
-      case 'ADD_TODO':
+      case 'SEARCHSONG_WAIT':
+        return {
+            ...state,
+            songs: [],
+            loading: true,
+        }
+      case 'SEARCHSONG_SUCCESS':
         return {
             ...state,
             songs: action.songs,
+            loading: false,
         }
-      case 'SEARCH_SONG':
+      case 'SEARCHSONG_FAIL':
         return {
             ...state,
-            songs: action.songs,
-        }
+            songs: [],
+            loading: false,
+      }
       default:
         return {
             ...state,
+            loading: false,
         }
     }
-}
-  
-export default songlist
+} 
+ 
