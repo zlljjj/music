@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
-import { songlist } from "../reducers/techReducer"
+import { songlist , getsong } from "../pages/Tech/techReducer"
 
 const rootReducers = combineReducers({
-    songlist
+    songlist,
+    getsong,
 })
 
 export default rootReducers;
