@@ -3,6 +3,7 @@
   height: 100%;
   padding: 20px 25px;
   overflow: scroll;
+  padding-bottom: 150px;
 }
 .tech .tech-search {
   width: 200px;
@@ -63,4 +64,20 @@
   right: 20px;
   top: 20px;
   cursor: pointer;
+}
+.tech .tech-songstep {
+  width: 100%;
+  padding: 0px 40px;
+  color: #61b25a;
+  position: relative;
+}
+.tech .tech-songstep .tech-nowtime {
+  position: absolute;
+  left: 6px;
+  top: -5px;
+}
+.tech .tech-songstep .tech-alltime {
+  position: absolute;
+  right: 6px;
+  top: -5px;
 }

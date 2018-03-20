@@ -16,7 +16,7 @@ export const searchSong = (keywords) => (dispatch,getstate) => {
 }
 
 export const changeSong = (information) => (dispatch,getstate)=>{
-    dispatch({ type: GETSONG_WAIT , information: information })
+    // dispatch({ type: GETSONG_WAIT , information: information })
     getSongApi({
         id: information.id,
     }).then((res) => {

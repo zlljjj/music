@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header/header'
+import Audio from './components/Audio/audio'
 import './App.css';
 import { Route , HashRouter , Switch } from 'react-router-dom';
 import After from './pages/After/after';
@@ -31,6 +32,7 @@ class App extends Component {
                   <Route path="/after" component={After} />
                 </Switch>
             </div>
+            <Audio></Audio>
           </div>
         </HashRouter>
       </Provider>

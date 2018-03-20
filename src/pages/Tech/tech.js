@@ -1,6 +1,6 @@
 import React , { Component } from 'react';
 import './tech.css';
-import { Icon , Spin } from 'antd';
+import { Icon , Spin , Slider } from 'antd';
 import PlayStation from "../../components/PlayStation/playStation"
 import { searchSong , changeSong } from './techAction';
 import { connect } from 'react-redux';
@@ -36,6 +36,7 @@ class Tech extends Component {
 
     playSong(id,name,singer,state){
         const { playSong } = this.props;
+
         playSong({
             id:id,
             name:name,
@@ -71,7 +72,13 @@ class Tech extends Component {
                         </div> 
                     )) : null  
                 }
+                {/* <div className="tech-songstep">
+                    <div className="tech-nowtime">0.00</div>
+                    <Slider min={0.00} max={3.00} step={0.01} />
+                    <div className="tech-alltime">3.00</div>
+                </div> */}
                 <PlayStation information={playSongList} changePlay = {this.playSong.bind(this)}></PlayStation>
+                
             </div>
         )
     }
